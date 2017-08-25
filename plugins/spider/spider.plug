@@ -1,0 +1,9 @@
+[Core]
+Name = Spider
+Module = spider
+
+[Documentation]
+Description = Spider spider spider
+
+[Python]
+Version = 3
