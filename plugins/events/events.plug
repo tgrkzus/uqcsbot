@@ -1,0 +1,9 @@
+[Core]
+Name = Events
+Module = events
+
+[Documentation]
+Description = Prints the events (TODO param)
+
+[Python]
+Version = 3
