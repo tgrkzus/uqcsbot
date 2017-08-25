@@ -1,0 +1,9 @@
+[Core]
+Name = Cat
+Module = cat
+
+[Documentation]
+Description = Prints out a moss cat
+
+[Python]
+Version = 3

@@ -17,4 +17,4 @@ BOT_IDENTITY = {
 
 BOT_ADMINS = ('@tgrkzus', )
 
-CORE_PLUGINS = ()
+CORE_PLUGINS = ('Help')
