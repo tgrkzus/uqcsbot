@@ -1,0 +1,10 @@
+[Core]
+Name = caesar
+Module = caesar
+
+
+[Documentation]
+Description = This is a simple plugin example to get you started.
+
+[Python]
+Version = 3
