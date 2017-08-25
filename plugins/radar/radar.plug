@@ -1,0 +1,9 @@
+[Core]
+Name = Radar
+Module = radar
+
+[Documentation]
+Description = Gets the Bureau of Meteorology's latest radar image
+Commands = !'radar' - Gets Brisbane's radar
+[Python]
+Version = 3
