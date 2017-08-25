@@ -17,4 +17,11 @@ BOT_IDENTITY = {
 
 BOT_ADMINS = ('@tgrkzus', )
 
-CORE_PLUGINS = ('Help')
+CORE_PLUGINS = ('Help', 'Health')
+
+# Restrict core commands to users (we can also dynamically adjust these)
+ACCESS_CONTROLS_DEFAULT = {} # Allow everyone access by default
+ACCESS_CONTROLS = {
+                   'shutdown': {'allowusers': BOT_ADMINS},
+                   'restart': {'allowusers': BOT_ADMINS},
+                  }
