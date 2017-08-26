@@ -1,0 +1,9 @@
+[Core]
+Name = Ecp
+Module = ecp
+
+[Documentation]
+Description = Get's the ecp
+
+[Python]
+Version = 3
