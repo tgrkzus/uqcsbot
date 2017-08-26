@@ -1,0 +1,9 @@
+[Core]
+Name = Muterip
+Module = muterip
+
+[Documentation]
+Description = Mutes rip
+
+[Python]
+Version = 3
