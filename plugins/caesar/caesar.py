@@ -4,8 +4,8 @@ from errbot import BotPlugin, botcmd
 class Example(BotPlugin):
 
     @botcmd(split_args_with=" ")  # flags a command
-    def caesar(msg, args):  # a command callable with !caesar
-        if len(args) > 2 and args[0].isdigit():
+    def caesar(self, msg, args):  # a command callable with !caesar
+        if len(args) > 1 and args[0].isdigit():
             key = int(args[0])
             text = ""
             shifted = ""
@@ -21,5 +21,5 @@ class Example(BotPlugin):
                     shifted += char
             return shifted
         else:
-            return 'Usage: !caesar [int] [text]'
+            return 'Usage: !caesar [int] [text]'+str(len(args))
 
