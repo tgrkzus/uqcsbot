@@ -22,7 +22,7 @@ class Muterip(BotPlugin):
     def callback_message(self, message):
         if (self.muted):
             event = message.extras.get('slack_event')
-            perpetrator = 'rip'
+            perpetrator = 'ndl'
             if (self._bot.userid_to_username(event.get('user')) == perpetrator):
                 self.manual_chat_delete(self.SLACK_ADMIN_TOKEN, event.get('channel'), event.get('ts'))
 

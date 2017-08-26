@@ -1,0 +1,9 @@
+[Core]
+Name = Voteythumbs
+Module = voteythumbs
+
+[Documentation]
+Description = Add's a thumbs up/down to the message for easy voting
+
+[Python]
+Version = 3
