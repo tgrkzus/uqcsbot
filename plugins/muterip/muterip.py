@@ -6,6 +6,7 @@ import requests
 class Muterip(BotPlugin):
     muted = False
     funmuted = False
+    perpetrator = 'rip'
     SLACK_ADMIN_TOKEN = os.environ["SLACK_ADMIN_TOKEN"] 
 
     def manual_chat_delete(self, token, channel, ts):
@@ -29,14 +30,13 @@ class Muterip(BotPlugin):
         requests.get(prefix + tokenC + channelC + userC)
 
     def callback_message(self, message):
-        perpetrator = 'dummy'
         if (self.muted):
             event = message.extras.get('slack_event')
-            if (self._bot.userid_to_username(event.get('user')) == perpetrator):
+            if (self._bot.userid_to_username(event.get('user')) == self.perpetrator):
                 self.manual_chat_delete(self.SLACK_ADMIN_TOKEN, event.get('channel'), event.get('ts'))
         if (self.funmuted):
             event = message.extras.get('slack_event')
-            if (self._bot.userid_to_username(event.get('user')) == perpetrator):
+            if (self._bot.userid_to_username(event.get('user')) == self.perpetrator):
                 if event.get('subtype') != 'channel_join':
                     self.manual_kick(self.SLACK_ADMIN_TOKEN, event.get('channel'), event.get('user'))
 
@@ -72,14 +72,13 @@ class Muterip(BotPlugin):
     @botcmd
     def surpriserip(self, message, args):
         """:rip: fun rip rip :rip:"""
-        perpetrator = 'dummy'
         channels = self._bot.rooms()
 
         for c in channels:
             prefix = "https://slack.com/api/channels.invite?"
             tokenC = "token=" + self.SLACK_ADMIN_TOKEN + "&"
             channelC = "channel=" + c.id + "&"
-            userC = "user=" + self._bot.username_to_userid(perpetrator)
+            userC = "user=" + self._bot.username_to_userid(self.perpetrator)
 
             requests.get(prefix + tokenC + channelC + userC)
 

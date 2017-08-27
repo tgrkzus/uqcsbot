@@ -12,8 +12,7 @@ class ModeratedChannel():
         self.mods = mods
 
 class Moderate(BotPlugin):
-    SLACK_ADMIN_TOKEN = os.environ["SLACK_ADMIN_TOKEN"] 
-
+    #SLACK_ADMIN_TOKEN = os.environ["SLACK_ADMIN_TOKEN"] 
 
     def manual_chat_delete(self, token, channel, ts):
         """
