@@ -1,0 +1,10 @@
+[Core]
+name = Moderate
+module = moderate
+
+[Documentation]
+description = Tools for moderation of specific channels
+
+[Python]
+version = 3
+
