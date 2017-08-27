@@ -1,0 +1,9 @@
+[Core]
+name = Whatsdue
+module = whatsdue
+
+[Documentation]
+description = Tells you what's due!
+
+[Python]
+version = 3
