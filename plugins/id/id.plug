@@ -1,0 +1,9 @@
+[Core]
+Name = Id
+Module = id
+
+[Documentation]
+Description = Returns your slack ID to you in a private message.
+
+[Python]
+Version = 3
