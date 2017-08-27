@@ -9,6 +9,7 @@ BOT_EXTRA_PLUGIN_DIR = 'plugins/'
 
 BOT_LOG_FILE = r'errbot.log/'
 BOT_LOG_LEVEL = logging.DEBUG
+AUTOINSTALL_DEPS = True
 
 BOT_PREFIX = '!'
 BOT_IDENTITY = {
