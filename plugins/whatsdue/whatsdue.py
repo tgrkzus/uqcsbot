@@ -23,7 +23,10 @@ class Whatsdue(BotPlugin):
             raise ValueError("Invalid Course")
 
         # Find profile id
-        profile = re.search("profileId=\d*", res.text).group(0).replace("profileId=", "")
+        try:
+            profile = re.search("profileId=\d*", res.text).group(0).replace("profileId=", "")
+        except AttributeError:
+            raise ValueError("Invalid course")
 
         resAssignments = requests.get(assessmentUrl + profile)
 
@@ -101,7 +104,7 @@ class Whatsdue(BotPlugin):
 
         for i in range(0, len(courses)):
             for a in courseData[i]:
-                resultMessage += ("*" + courses[i] + "*: " +
+                resultMessage += ("*" + courses[i].upper() + "*: " +
                         "`" + a[0] + "` " +
                         "_(" + a[1] + ")_ " +
                         "*" + a[2] + "*" + "\r\n")
