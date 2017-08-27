@@ -1,0 +1,9 @@
+[Core]
+Name = Wakie
+Module = wakie
+
+[Documentation]
+Description = Pings people at 5PM to ask what they're working on
+
+[Python]
+Version = 3

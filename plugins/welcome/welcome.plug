@@ -1,0 +1,9 @@
+[Core]
+Name = Welcome
+Module = welcome
+
+[Documentation]
+Description = Welcomes a new user to general and sends them a PM with further instructions.
+
+[Python]
+Version = 3
