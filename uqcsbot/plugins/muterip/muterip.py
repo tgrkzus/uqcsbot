@@ -56,7 +56,6 @@ class Muterip(BotPlugin):
     @botcmd
     def excommunicaterip(self, message, args):
         """:rip: fun rip rip :rip:"""
-        perpetrator = 'dummy'
         channels = self._bot.rooms()
 
         for c in channels:
@@ -66,7 +65,7 @@ class Muterip(BotPlugin):
             members = c.occupants
 
             for m in members:
-                if m.username == perpetrator:
+                if m.username == self.perpetrator:
                     self.manual_kick(self.SLACK_ADMIN_TOKEN, c.id, m.userid) 
 
     @botcmd
