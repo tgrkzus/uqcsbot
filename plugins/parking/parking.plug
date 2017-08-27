@@ -1,0 +1,9 @@
+[Core]
+Name = Parking
+Module = parking
+
+[Documentation]
+Description = Provides details of real-time parking availability at UQ St Lucia.
+
+[Python]
+Version = 3

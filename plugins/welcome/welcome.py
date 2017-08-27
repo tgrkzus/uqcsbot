@@ -18,7 +18,7 @@ class Welcome(BotPlugin):
         channel_id = self.build_identifier('#'+channel_name)
         subtype = message.extras.get('slack_event').get('subtype')
         if subtype != None:
-            if subtype == 'channel_join' and channel_name == 'random':
+            if subtype == 'channel_join' and channel_name == 'general':
                 user = self._bot.userid_to_username(message.extras['slack_event']['user'])
                 self.send(channel_id, 'Welcome ' + user)
             for msg in welcomeMessages: 
