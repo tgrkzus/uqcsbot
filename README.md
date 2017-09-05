@@ -5,8 +5,7 @@
 - Clone the repo
 - Optionally create a virtualenv with python3 (``virtualenv --python `which python3` [PATH]``)
   - Activate env: `source [PATH]/bin/activate`
-- Run `python setup.py install`
-- Setup tokens (i.e. `export THING=stuff`):
+- Run `python setup.py install`. This will install deps and prompt for tokens:
   - `SLACK_BOT_TOKEN` - Bot token you can get from the slack api (TODO better instr)
   - `SLACK_ADMIN_TOKEN` - If you want to do any admin specific features (this is only used for !muterip right now)
 - Run `errbot` in the `uqcsbot` directory (TODO setuptools run?)
