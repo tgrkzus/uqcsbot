@@ -1,0 +1,9 @@
+[Core]
+Name = LookingForCTO
+Module = lookingforcto
+
+[Documentation]
+Description = Provides useful tips and tricks for snagging your own CTO!
+
+[Python]
+Version = 3
