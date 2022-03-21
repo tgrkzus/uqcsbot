@@ -32,7 +32,7 @@ six==1.10.0
 slackclient==1.0.7
 uqcsbot==1.0
 urllib3==1.24.2
-waitress==1.4.2
+waitress==2.1.1
 WebOb==1.7.3
 websocket-client==0.44.0
 WebTest==2.0.28
